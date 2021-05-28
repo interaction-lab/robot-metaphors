@@ -1,6 +1,6 @@
 let chosen_robot;
 // get dropdown from CSV
-d3.csv("/data/tsne_data/RobotAverages.csv", d3.autoType).then((multifacet_data) => {
+d3.csv("./data/tsne_data/RobotAverages.csv", d3.autoType).then((multifacet_data) => {
 // d3.csv("/data/tsne_data/RobotAverages.csv", function(error, multifacet_data) {
     console.log(multifacet_data)
     

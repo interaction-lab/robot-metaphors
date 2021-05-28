@@ -27,10 +27,10 @@ const tooltip = d3
 const svg = d3
   .select("#tsne_dataviz")
 
-d3.csv("/data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
-  d3.tsv("/data/tsne_data/averaged_social_perception_responses.tsv", d3.autoType).then(
+d3.csv("./data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
+  d3.tsv("./data/tsne_data/averaged_social_perception_responses.tsv", d3.autoType).then(
     (social_tsv) => {
-      d3.tsv("/data/tsne_data/functional_perception_responses.tsv", d3.autoType).then(
+      d3.tsv("./data/tsne_data/functional_perception_responses.tsv", d3.autoType).then(
         async (functional_tsv) => {
           let perception_map = new Map();
           social_tsv.forEach((row) => {
@@ -91,7 +91,7 @@ d3.csv("/data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
             name: robots_csv[i]["Robot Name"],
             x: points[0],
             y: points[1],
-            image_url: '/data/stimuli/' + robots_csv[i]["Robot Name"] + '.PNG',
+            image_url: './data/stimuli/' + robots_csv[i]["Robot Name"] + '.PNG',
           }));
 
           function handleFunctionalButton(e) {

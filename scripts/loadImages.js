@@ -10,7 +10,7 @@ function loadImage(chosen_robot)
     var label = document.createElement("label")
     label.setAttribute("for", "zoomCheck")
 
-	imageURL = "/data/stimuli/" + chosen_robot + ".PNG"
+	imageURL = "./data/stimuli/" + chosen_robot + ".PNG"
     var img = document.createElement("img")
     img.setAttribute("src", imageURL)
     img.className += "img-fluid"
@@ -32,7 +32,7 @@ function wordCloud(chosen_robot)
     var label = document.createElement("label")
     label.setAttribute("for", "zoomCheck2")
 
-	imageURL = "/data/wordcloud_imgs/" + chosen_robot + ".png"
+	imageURL = "./data/wordcloud_imgs/" + chosen_robot + ".png"
     var img = document.createElement("img")
     img.setAttribute("src", imageURL)
     img.className += "img-fluid"

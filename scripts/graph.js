@@ -75,7 +75,7 @@ function make_y_gridlines(y) {
 
 function initChart(robot)
 {
-  d3.csv("/data/tsne_data/RobotAverages.csv", d3.autoType).then((data) => {
+  d3.csv("./data/tsne_data/RobotAverages.csv", d3.autoType).then((data) => {
   // d3.csv("/data/tsne_data/RobotAverages.csv", function(data) {
 
     for (let i = 0; i < data.length; i++) {
@@ -184,7 +184,7 @@ function updateChart(robot)
   loadImage(robot);
   wordCloud(robot);
   d3.select("#dropdown").selectAll('option').property('selected', d => {return d == robot} ); //select the correct robot from the dropdown
-  d3.csv("/data/tsne_data/RobotAverages.csv", d3.autoType).then((data) => {
+  d3.csv("./data/tsne_data/RobotAverages.csv", d3.autoType).then((data) => {
   // d3.csv("/data/tsne_data/RobotAverages.csv", function(data) {
 
     for (let i = 0; i < data.length; i++) {
