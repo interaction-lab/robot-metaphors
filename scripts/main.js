@@ -225,7 +225,7 @@ const GeoToNormalizedCartesian = (coordinates) => {
 
 function getNormCoordinates(robots_csv) {
   return d3
-    .json("/data/tsne_data/geo_coordinates.json")
+    .json("./data/tsne_data/geo_coordinates.json")
     .then((data) =>
       robots_csv.map((robot) =>
         GeoToNormalizedCartesian(data[robot["Country of Origin"]])
