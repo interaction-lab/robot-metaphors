@@ -96,19 +96,25 @@ d3.csv("./data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
 
           function handleFunctionalButton(e) {
             svg.selectAll("g").remove();
-            let color_scale = d3
-              .scaleLinear()
-              .domain(d3.extent(functional_tsv, (d) => d[e.target.name]))
-              .range([0.1, 1]);
+            // let color_scale = d3
+            //   .scaleLinear()
+            //   .domain(d3.extent(functional_tsv, (d) => d[e.target.name]))
+            //   .range([0.1, 1]);
+            let color_scale = d3.scaleSequential(t=>d3.interpolateBrBG(1-t))
+            .domain(d3.extent(functional_tsv, (d) => d[e.target.name]));
+
             plot(res, e.target.name, perception_map, color_scale);
           }
-
+          
           function handleSocialButton(e) {
             svg.selectAll("g").remove();
-            let color_scale = d3
-              .scaleLinear()
-              .domain(d3.extent(social_tsv, (d) => d[e.target.name]))
-              .range([0.1, 1]);
+            // let color_scale = d3
+            //   .scaleLinear()
+            //   .domain(d3.extent(social_tsv, (d) => d[e.target.name]))
+            //   .range([0.1, 1]);
+            let color_scale = d3.scaleSequential(t=>d3.interpolateBrBG(1-t))
+            .domain(d3.extent(social_tsv, (d) => d[e.target.name]));
+
             plot(res, e.target.name, perception_map, color_scale);
           }
 
@@ -122,10 +128,12 @@ d3.csv("./data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
               e.addEventListener("click", handleFunctionalButton)
             );
 
-          let color_scale = d3
-            .scaleLinear()
-            .domain(d3.extent(functional_tsv, (d) => d.AMBIGUITY))
-            .range([0.1, 1]);
+          // let color_scale = d3
+          //   .scaleLinear()
+          //   .domain(d3.extent(functional_tsv, (d) => d.AMBIGUITY))
+          //   .range([0.1, 1]);
+          let color_scale = d3.scaleSequential(t=>d3.interpolateBrBG(1-t))
+          .domain(d3.extent(functional_tsv, (d) => d.AMBIGUITY))
           plot(res, "AMBIGUITY", perception_map, color_scale);
         }
       );
@@ -144,7 +152,7 @@ function plot(data, construct, perception_map, color_scale) {
     .domain(d3.extent(data, (d) => d.y))
     .range([height - margin.bottom, margin.top]);
 
-  let c = d3.color(construct2color[construct]);
+  // let c = d3.color(construct2color[construct]);
 
   const dot = svg
     .append("g")
@@ -152,8 +160,9 @@ function plot(data, construct, perception_map, color_scale) {
     .data(data)
     .join("circle")
     .attr("fill", (d) => {
-      c.opacity = color_scale(perception_map.get(d.name)[construct]);
-      return c;
+      // c.opacity = color_scale(perception_map.get(d.name)[construct]);
+      // return c;
+      return color_scale(perception_map.get(d.name)[construct]);
     })
     .attr("class", "circle")
     .attr("cx", (d) => x(d.x))
