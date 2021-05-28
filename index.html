@@ -1,9 +1,352 @@
 <!DOCTYPE html>
-<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf8" />
+  <script src="scripts/libs/distillv2.min.js"></script>
+  <script src="scripts/libs/d3v6.min.js"></script>
+
+  <script src="scripts/tsne.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/multifacet_styles.css">
+</head>
+
 <body>
+  <d-title>
 
-<h1>Robot Design Metaphors</h1>
-<p>Here we go!</p>
+    <h1 style="text-align: center;">Understanding Perception <br> of Socially Interactive Robots through Design Metaphors</h1>
+    <p style="text-align: center;">Nathaniel Dennler<sup>1,2</sup>, Changxiao Ruan<sup>1</sup>, Jessica Hadiwijoyo<sup>1</sup>, Brenna Chen<sup>1</sup>, Stefanos Nikolaidis<sup>2</sup>, Maja Matarić<sup>1</sup></p>
+    <p style="text-align: center;font-size:14px"><sup>1</sup> <a href='http://robotics.usc.edu/interaction/' style="text-decoration: none;">Interaction Lab, Department of Computer Science, University of Southern California</a></p>
+    <p style="text-align: center;font-size:14px"><sup>2</sup> <a href='http://icaros.usc.edu/' style="text-decoration: none;">ICAROS Lab, Department of Computer Science, University of Southern California</a> </p>
+    <p style="text-align: center;font-size:14px">[<a href='!TODO!'>paper</a>]   &emsp;  [<a href='!TODO!'>questionnaires</a>]   &emsp;   [<a href='!TODO!'>data</a>]</p>
+  </d-title>
 
+  <d-article>
+
+
+    <!-- Here is the side bar that allows you to navigate between the different sections -->
+    <d-contents id="toc"
+      ><nav class="l-text toc figcaption">
+        <h3>Contents</h3>
+        <div><a href="#introduction">Motivation</a></div>
+        <div>
+          <a href="#section1">Gathering Design Metaphors</a>
+        </div>
+        <ul>
+          <li>
+            <a href="#subsection1">t-SNE visualization</a>
+          </li>
+          <li>
+            <a href="#subsection2">subsection2</a>
+          </li>
+        </ul>
+        <div>
+          <a href="#section2">Section 2</a>
+        </div>
+        <div>
+          <a href="#section2">Section 3</a>
+        </div>
+      </nav>
+    </d-contents>
+
+    <!-- begin the actual content. -->
+    <div>
+      <h2 id="introduction">Motivation</h2>
+      <p>
+        Thinking about huge design spaces can be quite daunting. When designing a new robot for some task,
+        you might think about the millions of different choices you can make. Wheels or legs? Should the mouth
+        move or should the sound just play through motionless speakers near the mouth? Should the robot blink?
+      </p>
+
+      <p>
+         Often, many of these low level choices will be overlooked, and maybe what really matters is the impression
+         that your design gives. It may be easier to make these low-level choices if you have formulated an end-goal
+         that you are trying to design toward.
+      </p>
+
+
+      <h2 id="section1">Section 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget dui
+        turpis. Aliquam mauris nisi, luctus ac nunc quis, porttitor accumsan
+        magna. Donec quis blandit augue, sed varius enim. Curabitur bibendum urna
+        sagittis est dapibus vulputate id ut nibh. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia curae; Aliquam a justo
+        sed neque commodo consectetur. In hac habitasse platea dictumst. Proin
+        lorem lectus, ultrices non enim ut, volutpat dignissim diam. Vivamus nunc
+        ante, pellentesque ut nibh in, tempor consequat nibh. Phasellus mollis
+        suscipit vulputate. Nulla facilisi. Donec ligula velit, tincidunt eu
+        faucibus auctor, imperdiet sit amet enim. Pellentesque eget efficitur
+        nulla, viverra vestibulum odio.
+      </p>
+
+    </div>
+
+    <figure id="subsection1">
+      
+      <h4>Functional Perception:</h4>
+      <div class="button-container" id="functional" style="text-align: center;">
+        
+        <button id="nonverbal" name="NONVERBAL">Nonverbal Communication</button>
+        <button id="perception" name="PERCEPTION">Perception and Interpretation</button>
+        <button id="tactile_mobility" name="TACTILE_MOBILITY">Tactile Interaction and Mobility</button>
+        <br>
+        <button id="ambiguity" name="AMBIGUITY">Design Ambiguity</button>
+        <button id="atypicality" name="ATYPICALITY">Design Atypicality</button>
+      </div>
+      <h4>Social Perception:</h4>
+      <div class="button-container" id="social" style="text-align: center;">
+        
+        <button id="warmth" name="WARMTH">Warmth</button>
+        <button id="competence" name="COMPETENCE">Competence</button>
+        <button id="discomfort" name="DISCOMFORT">Discomfort</button>
+        <button id="role" name="ROLE">Role</button>
+        <br>
+        <button id="masculine" name="MASCULINE">Masculinity</button>
+        <button id="feminine" name="FEMININE">Feminity</button>
+        <button id="likeability" name="LIKEABILITY">Likeability</button>
+        <button id="identify" name="IDENTIFY">Identity Closeness</button>
+        
+      </div>
+      <br>
+      <svg id="tsne_dataviz"></svg>
+    </figure>
+
+   
+
+    <div class="row " style="justify-content: center;">
+        <div class="col-10 ">
+          <div id="multifacet_dataviz"></div>
+        </div>
+        <div class="col-2 ">
+          <div id="wordCloud" class="zoomBox"></div>
+        </div>
+    </div>
+    <figure>
+        <div id="robotImg" class="zoomBox"></div>
+    </figure>
+
+    <div id="dropdown" class="row"> </div>
+
+    <h2 id="section2">Section 2</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget dui
+      turpis. Aliquam mauris nisi, luctus ac nunc quis, porttitor accumsan
+      magna. Donec quis blandit augue, sed varius enim. Curabitur bibendum urna
+      sagittis est dapibus vulputate id ut nibh. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia curae; Aliquam a justo
+      sed neque commodo consectetur. In hac habitasse platea dictumst. Proin
+      lorem lectus, ultrices non enim ut, volutpat dignissim diam. Vivamus nunc
+      ante, pellentesque ut nibh in, tempor consequat nibh. Phasellus mollis
+      suscipit vulputate. Nulla facilisi. Donec ligula velit, tincidunt eu
+      faucibus auctor, imperdiet sit amet enim. Pellentesque eget efficitur
+      nulla, viverra vestibulum odio.
+    </p>
+    <h2 id="section3">Section 3</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget dui
+      turpis. Aliquam mauris nisi, luctus ac nunc quis, porttitor accumsan
+      magna. Donec quis blandit augue, sed varius enim. Curabitur bibendum urna
+      sagittis est dapibus vulputate id ut nibh. Vestibulum ante ipsum primis in
+      faucibus orci luctus et ultrices posuere cubilia curae; Aliquam a justo
+      sed neque commodo consectetur. In hac habitasse platea dictumst. Proin
+      lorem lectus, ultrices non enim ut, volutpat dignissim diam. Vivamus nunc
+      ante, pellentesque ut nibh in, tempor consequat nibh. Phasellus mollis
+      suscipit vulputate. Nulla facilisi. Donec ligula velit, tincidunt eu
+      faucibus auctor, imperdiet sit amet enim. Pellentesque eget efficitur
+      nulla, viverra vestibulum odio.
+    </p>
+
+    <h2 id="section4">Study Information</h2>
+
+    <p>The following 3 files contain the cleaned information collected from the studies. For all studies, Likert questions are measured on a scale of -3 to 3 (where -3 is strongly disagree, and 3 is strongly agree with intermediate values as shown in the videos of the question pages), and semantic-differential scale questions are measured on a scale of 1 to 9 (where 1 is the left pole, and 9 is the right pole, as shown in the video). All demographic information is assigned to a key described seperately to help reduce personal researcher biases toward demographic groups when exploring the data.</p>
+
+    <p>Note: All the CSVs are tab-delimted</p>
+    <ul>
+      <li>CleanedMetaphorResponses(Study1).csv contains the cleaned information collected from the design metaphor study.</li>
+      <li>CleanedSocialResponses(Study2).csv contains the cleaned information collected from the social perception study.</li>
+      <li>CleanedFunctionalResponses(Study3).csv contains the cleaned information collected from the functional perception study.</li>
+    </ul>
+
+
+   <h2>Auxillary Study Information</h2>
+
+   <ul>
+      <li>DemographicInformationMapping.csv contains the human-readable items that represent the items in the previous 3 files.</li>
+      <li>RobotAverages.csv contains the information from study2 and study3, aggregated by robot. All values represent means of all user-reported metrics for the given robot.</li>
+   </ul>
+
+
+   <h2 >Robot Database Information</h2>
+
+   <ul>
+      <li>Robot Descriptors - Included Robots.csv gives a table of all of the robots included in the study, as well as their coded features. These features were used to make the t-SNE plot to visually show the relationships between different robots.</li>
+      <li>Robot Descriptors - Feature Explanation.csv gives a human-understandable description of what the features listed in the database mean.</li>
+      <li>MetaphorClassifications.csv contains the classifications that were assigned to each unique metaphor.</li>
+      <li>Robot Images.pdf contains the stimuli provided during the study.</li>
+      <li>MetaphorCounts.csv contains the top 3 metaphors for each robot and their counts.</li>
+   </ul>
+
+   <!-- not needed bc not including video
+   <h2 >Questionnaires and Interactive Elements</h2>
+   <ul>
+      <li>MetaphorSurveyInterfaceandQuestions.mp4 contains the exact questionnaire administered in Study 1 (crowd-sourcing design metaphors) minus the university-specific consent form</li>
+      <li>SocialPerceptionSurveyInterfaceandQuestions.mp4 contains the exact questionnaire administered in Study 2 (social perception) minus the university-specific consent form</li>
+      <li>MetaphorSurveyInterfaceandQuestions.mp4 contains the exact questionnaire administered in Study 3 (functional perception) minus the university-specific consent form </li>
+      <li>InteractiveFigure3.mp4 contains a video of a user interacting with the t-SNE visualization to explore the space of robot embodiments.</li>
+   </ul> -->
+
+   <h2 >Resources</h2>
+
+    <div class="wrap-table100">
+      <div class="table">
+
+        <div class="row header">
+          <div class="cell">
+            Name
+          </div>
+          <!-- <div class="cell">
+            Notes
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/CleanedMetaphorResponses(Study1).csv">CleanedMetaphorResponses(Study1).csv</a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+            
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/CleanedSocialResponses(Study2).csv">CleanedSocialResponses(Study2)</a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+            
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/CleanedFunctionalResponses(Study3).csv">CleanedFunctionalResponses(Study3).csv</a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+            
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/DemographicInformationMapping.csv">DemographicInformationMapping.csv</a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/RobotAverages.csv">RobotAverages.csv</a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/Robot Descriptors - Included Robots.csv">Robot Descriptors - Included Robots.csv</a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/Robot Descriptors - Feature Explanation.csv">Robot Descriptors - Feature Explanation.csv </a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/MetaphorClassifications.csv"> MetaphorClassifications.csv </a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/Robot Images.pdf"> Robot Images.pdf </a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+        <div class="row">
+          <div class="cell" data-title="Name">
+            <a href = "resources/MetaphorCounts.csv"> MetaphorCounts.csv </a>
+          </div>
+          <!-- <div class="cell" data-title="Notes">
+
+          </div> -->
+        </div>
+
+      </div>
+    </div>
+  </d-article>
+
+
+
+
+  <d-appendix>
+    <d-citation-list distill-prerendered="true"
+      ><style>
+        d-citation-list {
+          contain: style;
+        }
+
+        d-citation-list .references {
+          grid-column: text;
+        }
+
+        d-citation-list .references .title {
+          font-weight: 500;
+        }
+      </style>
+      <h3 id="references">References</h3>
+      <ol id="references-list" class="references">
+        <li id="un2017special">
+          <span class="title">
+              Report on the role of digital access providers
+              </span>
+           <a
+            href="https://www.ohchr.org/EN/Issues/FreedomOpinion/Pages/SR2017ReporttoHRC.aspx"
+            >[link]</a
+          ><br />OHCHR,, 2017. United Nations Human Rights Office of the High
+          Commissioner.
+        </li>
+        <li id="kay2011personal">
+          <span class="title"
+            >A personal computer for children of all ages</span
+          >
+           <a href="https://dl.acm.org/doi/abs/10.1145/800193.1971922">[link]</a
+          ><br />Kay, A.C., 1972. Proceedings of the ACM Annual Conference.
+        </li>
+      </ol></d-citation-list>
+  </d-appendix>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/multifacet.js"></script>
+  <script src="scripts/graph.js"></script>
+  <script src="scripts/loadImages.js"></script>
 </body>
-</html>
