@@ -110,7 +110,7 @@ author:
   links:
     - label: "Download"
       icon: "fas fa-fw fa-download"
-      url: "/assets/data/downloadables/MUFaSAA.zip"
+      url: "/robot-metaphors/assets/data/downloadables/MUFaSAA.zip"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
