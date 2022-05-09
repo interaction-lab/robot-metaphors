@@ -59,10 +59,10 @@ function update_robot(){
     })
 
     //update pictures
-    d3.select('#left-robot-image').attr("src", '/assets/data/stimuli/' + l + '.PNG')
-    d3.select('#left-robot-wordcloud').attr("src", '/assets/data/wordcloud_imgs/' + l + '.png')
-    d3.select('#right-robot-image').attr("src", '/assets/data/stimuli/' + r + '.PNG')
-    d3.select('#right-robot-wordcloud').attr("src", '/assets/data/wordcloud_imgs/' + r + '.png')
+    d3.select('#left-robot-image').attr("src", '/robot-metaphors/assets/data/stimuli/' + l + '.PNG')
+    d3.select('#left-robot-wordcloud').attr("src", '/robot-metaphors/assets/data/wordcloud_imgs/' + l + '.png')
+    d3.select('#right-robot-image').attr("src", '/robot-metaphors/assets/data/stimuli/' + r + '.PNG')
+    d3.select('#right-robot-wordcloud').attr("src", '/robot-metaphors/assets/data/wordcloud_imgs/' + r + '.png')
 
     //update metaphors
     let selection =d3.select('#left-robot-metaphors').selectAll('ul')
@@ -134,7 +134,7 @@ function update_robot(){
 
 }
 
-var data = d3.csv('/assets/data/tsne_data/RobotAverages.csv', function (data){
+var data = d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (data){
 
     d3.select('#right-robot').append('option').attr('value', data.ROBOT).text(data.ROBOT)
     d3.select('#left-robot').append('option').attr('value', data.ROBOT).text(data.ROBOT)

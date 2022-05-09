@@ -32,7 +32,7 @@ layout: default
   <!-- BROWSE TAB CONTENT -->
   <div id="browse" class="tab-pane fade" style="padding-left:10%;padding-right:10%">
     <ul id="robot-list" style="display:flex;width:100%;flex-wrap:wrap;padding-left:50px;padding-right:50px;text-align:center;list-style:none;"></ul>
-    <script src="/assets/js/viz/browse.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/viz/browse.js"></script>
   </div>
 
   <!-- DISCOVER TAB CONTENT -->
@@ -102,8 +102,8 @@ layout: default
         <svg id="discover-viz-legend" style="width:100%;height:6%;display:block;margin:auto;"></svg>
       </div>
     </div>
-    <script src="/assets/js/tsne.js"></script>
-    <script src="/assets/js/viz/discover.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/tsne.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/viz/discover.js"></script>
     </div>
   </div>
 
@@ -140,7 +140,7 @@ layout: default
   </div>
 
   </div>
-  <script src="/assets/js/viz/compare.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/viz/compare.js"></script>
 
   </div>
 </div>

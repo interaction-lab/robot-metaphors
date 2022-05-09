@@ -1,9 +1,9 @@
 
 var db = d3.select("#robot-list")
 
-d3.csv('/assets/data/tsne_data/RobotAverages.csv', function (data){
+d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (data){
 
-    let imageURL = "/assets/data/stimuli/" + data.ROBOT + ".PNG"
+    let imageURL = "/robot-metaphors/assets/data/stimuli/" + data.ROBOT + ".PNG"
     let item = db.append('li')
                 .style('flex', '0 0 25%')
                 .style("padding-left", "5px")

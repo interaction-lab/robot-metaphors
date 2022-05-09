@@ -1,5 +1,3 @@
-
-
 const svg = d3
   .select("#discover-viz")
 
@@ -18,10 +16,10 @@ const tooltip = d3
   .text("");
 
 
-d3.csv("/assets/data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
-  d3.tsv("/assets/data/tsne_data/averaged_social_perception_responses.tsv", d3.autoType).then(
+d3.csv("/robot-metaphors/assets/data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
+  d3.tsv("/robot-metaphors/assets/data/tsne_data/averaged_social_perception_responses.tsv", d3.autoType).then(
     (social_tsv) => {
-      d3.tsv("/assets/data/tsne_data/functional_perception_responses.tsv", d3.autoType).then(
+      d3.tsv("/robot-metaphors/assets/data/tsne_data/functional_perception_responses.tsv", d3.autoType).then(
         async (functional_tsv) => {
             
           var perception_map = new Map();
@@ -83,7 +81,7 @@ d3.csv("/assets/data/tsne_data/output.csv", d3.autoType).then((robots_csv) => {
             name: robots_csv[i]["Robot Name"],
             x: points[0],
             y: points[1],
-            image_url: '/assets/data/stimuli/' + robots_csv[i]["Robot Name"] + '.PNG',
+            image_url: '/robot-metaphors/assets/data/stimuli/' + robots_csv[i]["Robot Name"] + '.PNG',
           }));
 
           function handleConstructChange(e) {
@@ -232,7 +230,7 @@ const GeoToNormalizedCartesian = (coordinates) => {
 
 function getNormCoordinates(robots_csv) {
   return d3
-    .json("/assets/data/tsne_data/geo_coordinates.json")
+    .json("/robot-metaphors/assets/data/tsne_data/geo_coordinates.json")
     .then((data) =>
       robots_csv.map((robot) =>
         GeoToNormalizedCartesian(data[robot["Country of Origin"]])

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>http://localhost:4000/robot-metaphors/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/expand/</loc>
+<loc>http://localhost:4000/robot-metaphors/expand/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/explore/</loc>
+<loc>http://localhost:4000/robot-metaphors/explore/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>http://localhost:4000/robot-metaphors/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/assets/data/downloadables/Robot%20Images.pdf</loc>
+<loc>http://localhost:4000/robot-metaphors/assets/data/downloadables/Robot%20Images.pdf</loc>
 <lastmod>2021-05-28T14:28:51-04:00</lastmod>
 </url>
 </urlset>
