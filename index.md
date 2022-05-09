@@ -1,7 +1,7 @@
 ---
 layout: splash
 ---
-<div style="text-align:center;"><img src="/assets/images/logo.jpg" style="width:20%;"></div>
+<div style="text-align:center;"><img src="{{ site.baseurl }}/assets/images/logo.jpg" style="width:20%;"></div>
 
 # The MUFaSAA Dataset
 Welcome to the MUFaSAA (Metaphors to Understand Functional and Social Anticipated Affordances) Dataset. This is a collection of 165 robot embodiments, the design metaphors people use to describe them, and the expectations users place on them.

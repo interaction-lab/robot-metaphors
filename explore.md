@@ -2,10 +2,10 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="/assets/css/bootstrap_styles.css">
-<script src="/assets/js/libs/jquery.js"></script>
-<script src="/assets/js/libs/bootstrap.js"></script>
-<script src="/assets/js/libs/d3v6.min.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap_styles.css">
+<script src="{{ site.baseurl }}/assets/js/libs/jquery.js"></script>
+<script src="{{ site.baseurl }}/assets/js/libs/bootstrap.js"></script>
+<script src="{{ site.baseurl }}/assets/js/libs/d3v6.min.js"></script>
 
 <div class="container" style="height:100%; width:100%">
 
