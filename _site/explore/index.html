@@ -1,0 +1,341 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>MUFaSAA Dataset</title>
+<meta name="description" content="The Metaphors to Understand Functional and Social Anticipated Affordances Dataset (MUFaSAA Dataset) allows users to explore robot designs through their metaphors. We present a dataset of 165 robots, each with three crowd-sourced design metaphors.">
+
+
+  <meta name="author" content="MuFaSAA Dataset">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="MUFaSAA Dataset">
+<meta property="og:title" content="MUFaSAA Dataset">
+<meta property="og:url" content="http://localhost:4000/explore/">
+
+
+  <meta property="og:description" content="The Metaphors to Understand Functional and Social Anticipated Affordances Dataset (MUFaSAA Dataset) allows users to explore robot designs through their metaphors. We present a dataset of 165 robots, each with three crowd-sourced design metaphors.">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/explore/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Interaction Lab @ USC",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="MUFaSAA Dataset Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          MUFaSAA Dataset
+          <span class="site-subtitle">Metaphors to Understand Functional and Social Anticipated Affordances</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/explore/">Explore</a>
+            </li><li class="masthead__menu-item">
+              <a href="/expand/">Expand</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <link rel="stylesheet" href="/assets/css/bootstrap_styles.css" />
+
+<script src="/assets/js/libs/jquery.js"></script>
+
+<script src="/assets/js/libs/bootstrap.js"></script>
+
+<script src="/assets/js/libs/d3v6.min.js"></script>
+
+<div class="container" style="height:100%; width:100%">
+
+  <ul class="nav nav-tabs nav-justified">
+    <li><a data-toggle="tab" href="#browse">Browse</a></li>
+    <li><a data-toggle="tab" href="#discover">Discover</a></li>
+    <li><a data-toggle="tab" href="#compare">Compare Robots</a></li>
+    <!-- <li><a data-toggle="tab" href="#compare">Compare Features</a></li> -->
+  </ul>
+
+  <div class="tab-content" style="height:100%; width:100%">
+    
+  <!-- INITIAL SPLASH SCREEN CONTENT -->
+  <div id="initial" class="tab-pane fade in active" style="text-align:center;">
+  <br />
+    Explore the MUFaSAA Dataset by selecting the different tabs above. <br /><br />
+    The <i>Browse</i> interaction allows you to view all of the robots in this 
+    database<br />
+    The <i>Discover</i> interaction allows you to find differences between robots that
+    are visually similar.<br />
+    The <i>Compare</i> interaction allows you to contrast two embodiments in detail.
+  </div>
+
+  <!-- BROWSE TAB CONTENT -->
+  <div id="browse" class="tab-pane fade" style="padding-left:10%;padding-right:10%">
+    <ul id="robot-list" style="display:flex;width:100%;flex-wrap:wrap;padding-left:50px;padding-right:50px;text-align:center;list-style:none;"></ul>
+    <script src="/assets/js/viz/browse.js"></script>
+  </div>
+
+  <!-- DISCOVER TAB CONTENT -->
+  <div id="discover" class="tab-pane fade" style="padding-left:10%;padding-right:10%;">
+  <div style="display:flex;flex-direction:column;flex-grow:1;text-align:center;">
+    <div style="display:grid;grid-template-columns: 1fr 9fr; grid-gap:10px; align-content: space-evenly; padding-top:1%;">
+      <div>
+        <div style="display:flex;flex-direction:column;justify-content:space-around;height:100%;flex-wrap:wrap;padding-left:10px;padding-right:10px;text-align:center;list-style:none;">
+        <ul class="gui-options">
+          <li>
+              <input type="radio" id="WARMTH" name="construct" checked="checked" />
+              <label for="WARMTH">Warmth</label>
+          </li>
+          <li>
+              <input type="radio" id="COMPETENCE" name="construct" />
+              <label for="COMPETENCE">Competence</label>
+          </li>
+          <li>
+              <input type="radio" id="DISCOMFORT" name="construct" />
+              <label for="DISCOMFORT">Discomfort</label>
+          </li>
+          <li>
+              <input type="radio" id="MASCULINE" name="construct" />
+              <label for="MASCULINE">Masculinity</label>
+          </li>
+          <li>
+              <input type="radio" id="FEMININE" name="construct" />
+              <label for="FEMININE">Femininity</label>
+          </li>
+          <li>
+              <input type="radio" id="ROLE" name="construct" />
+              <label for="ROLE">Social Role</label>
+          </li>
+          <li>
+              <input type="radio" id="IDENTIFY" name="construct" />
+              <label for="IDENTIFY">Identity Closeness</label>
+          </li>
+          <li>
+              <input type="radio" id="LIKEABILITY" name="construct" />
+              <label for="LIKEABILITY">Likeability</label>
+          </li>
+          <li>
+              <input type="radio" id="PERCEPTION" name="construct" />
+              <label for="PERCEPTION">Shared Perception and Interpretation</label>
+          </li>
+          <li>
+              <input type="radio" id="TACTILE_MOBILITY" name="construct" />
+              <label for="TACTILE_MOBILITY">Tactile Interaction and Mobility</label>
+          </li>
+          <li>
+              <input type="radio" id="NONVERBAL" name="construct" />
+              <label for="NONVERBAL">Non-verbal Expressiveness</label>
+          </li>
+          <li>
+              <input type="radio" id="AMBIGUITY" name="construct" />
+              <label for="AMBIGUITY">Design Ambiguity</label>
+          </li>
+          <li>
+              <input type="radio" id="ATYPICALITY" name="construct" />
+              <label for="ATYPICALITY">Design Atypicality</label>
+          </li>
+          </ul>
+        </div>
+      </div>
+      <div id="discover-viz-container">
+        <svg id="discover-viz" style="width:100%;min-height:650px;outline:1px solid #aaaaaa;display:block;margin:auto;"></svg>
+        <svg id="discover-viz-legend" style="width:100%;height:6%;display:block;margin:auto;"></svg>
+      </div>
+    </div>
+    <script src="/assets/js/tsne.js"></script>
+    <script src="/assets/js/viz/discover.js"></script>
+    </div>
+  </div>
+
+  <!-- COMPARE TAB CONTENT -->
+  <div id="compare" class="tab-pane fade" style="padding-left:10%;padding-right:10%">
+    <div style="display:grid;grid-template-columns: 4fr 3fr 4fr; grid-gap:10px; align-content: space-evenly; padding-top:1%;">
+  
+  <div style="text-align:center;">
+  
+  <select name="left-robot" id="left-robot" style="width:50%;"></select>
+
+  <div style="display:flex;flex-direction:column;justify-content:space-around;height:100%;flex-wrap:wrap;padding-left:10px;padding-right:10px;text-align:center;list-style:none;">
+  <img id="left-robot-image" style="object-fit:contain;" />
+  <img id="left-robot-wordcloud" style="object-fit:contain;" />
+  <ul id="left-robot-metaphors" style="padding-left:0;"></ul>
+  </div>
+
+  </div>
+
+  <div style="text-align:center;">
+  <svg id="compare-viz" style="width:100%;min-height:650px;outline:1px solid #aaaaaa;display:block;margin:auto;"></svg>
+  </div>
+
+  <div style="text-align:center;">
+  <select name="right-robot" id="right-robot" style="width:50%;"></select>
+
+  <div style="display:flex;flex-direction:column;justify-content:space-around;height:100%;flex-wrap:wrap;padding-left:10px;padding-right:10px;text-align:center;list-style:none;">
+  <img id="right-robot-image" style="object-fit:contain;" />
+  
+  <img id="right-robot-wordcloud" style="object-fit:contain;" />
+  <ul id="right-robot-metaphors" style="padding-left:0; "></ul>
+  </div>
+  
+  </div>
+
+  </div>
+  <script src="/assets/js/viz/compare.js"></script>
+
+  </div>
+</div>
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <!-- <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul> -->
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Interaction Lab @ USC. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
