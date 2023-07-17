@@ -6,4 +6,4 @@ layout: splash
 # The MUFaSAA Dataset
 Welcome to the MUFaSAA (Metaphors to Understand Functional and Social Anticipated Affordances) Dataset. This is a collection of 165 robot embodiments, the design metaphors people use to describe them, and the expectations users place on them.
 
-**Cite:** Dennler, N., Ruan, C., Hadiwijoyo, J., Chen, B., Nikolaidis, N., Matarić, M. (2022). *Design Metaphors for Understanding User Expectations of Socially Interactive Robot Embodiments.*
+**Cite:** Dennler, N., Ruan, C., Hadiwijoyo, J., Chen, B., Nikolaidis, S., & Matarić, M. (2023). Design metaphors for understanding user expectations of socially interactive robot embodiments. ACM Transactions on Human-Robot Interaction, 12(2), 1-41.
