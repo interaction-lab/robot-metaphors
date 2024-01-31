@@ -1,13 +1,6 @@
 
 var db = d3.select("#robot-list")
 
-var tooltip = d3.select('body').append('div')
-                .attr('class', 'tooltip')
-                .style('opacity', 0)
-                .attr("id", "tooltip")
-                .append("text")
-                .text("this is a popup")
-
 d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (data){
     console.log(data);
     //tooltip element
@@ -28,11 +21,18 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
                     
     item.append('img').attr('src', imageURL).attr("width", "90%").attr("height", "90%")
     item.append('p').text(data.ROBOT)
-    // Add click event listener for toggling the tooltip
+
+
+    // Add click event listener for toggling the overlay
     item.on('click', function (event) {
-        console.log(data.ROBOT)
-        d3.select("#tooltip").style('opacity', 1).append("text").text(data.ROBO)
+        //turn on the overlay
+        d3.select("#overlay").style('display', 'block')
+
+        //clears out the old info and add the robot picture to the overlay
+        d3.select("#overlay_info").html(null)
+            .append("img").attr('src', imageURL)
     });
+
     //add a little transition if it takes a while to load.
     item.transition().duration(100)
     .style('opacity', 1)
