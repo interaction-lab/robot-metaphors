@@ -110,12 +110,10 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
         secondRow.append('td').text(Math.round(data.TACTILE_MOBILITY * 100) / 100);
 
 
-        let thirdRow = tbody.append('tr');
-        thirdRow.append('td').text("Discomfort: ");
-        thirdRow.append('td').text(Math.round(data.DISCOMFORT * 100) / 100);
-        thirdRow.append('td').text("Nonverbal Communication: ");
-        thirdRow.append('td').text(Math.round(data.NONVERBAL * 100) / 100);
-
+        let thiRow = tbody.append('tr');
+        discomfortRow.append('td').text("Discomfort: " + Math.round(data.DISCOMFORT * 100) / 100);
+        discomfortRow.append('td').text("Discomfort: " + Math.round(data.DISCOMFORT * 100) / 100);
+        discomfortRow.append('td').text("Nonverbal Communication: " + Math.round(data.NONVERBAL * 100) / 100);
 
         // Metaphors section below the table
         let metaphorsSection = infoContainer.append('div')

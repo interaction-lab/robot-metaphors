@@ -97,25 +97,17 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
         let tbody = table.append('tbody');
 
         // Insert data rows for Social and Functional
-        let firstRow = tbody.append('tr');
-        firstRow.append('td').text("Warmth: ");
-        firstRow.append('td').text(Math.round(data.WARMTH * 100) / 100);
-        firstRow.append('td').text("Perception and Interpretation: ");
-        firstRow.append('td').text(Math.round(data.PERCEPTION * 100) / 100);
+        let socialRow = tbody.append('tr');
+        socialRow.append('td').text("Warmth: ");
+        socialRow.append('td').text("Perception and Interpretation: " + Math.round(data.PERCEPTION * 100) / 100);
 
-        let secondRow = tbody.append('tr');
-        secondRow.append('td').text("Competence: ");
-        secondRow.append('td').text(Math.round(data.COMPETENCE * 100) / 100);
-        secondRow.append('td').text("Tactile Interaction and Mobility: ");
-        secondRow.append('td').text(Math.round(data.TACTILE_MOBILITY * 100) / 100);
+        let competenceRow = tbody.append('tr');
+        competenceRow.append('td').text("Competence: " + Math.round(data.COMPETENCE * 100) / 100);
+        competenceRow.append('td').text("Tactile Interaction and Mobility: " + Math.round(data.TACTILE_MOBILITY * 100) / 100);
 
-
-        let thirdRow = tbody.append('tr');
-        thirdRow.append('td').text("Discomfort: ");
-        thirdRow.append('td').text(Math.round(data.DISCOMFORT * 100) / 100);
-        thirdRow.append('td').text("Nonverbal Communication: ");
-        thirdRow.append('td').text(Math.round(data.NONVERBAL * 100) / 100);
-
+        let discomfortRow = tbody.append('tr');
+        discomfortRow.append('td').text("Discomfort: " + Math.round(data.DISCOMFORT * 100) / 100);
+        discomfortRow.append('td').text("Nonverbal Communication: " + Math.round(data.NONVERBAL * 100) / 100);
 
         // Metaphors section below the table
         let metaphorsSection = infoContainer.append('div')

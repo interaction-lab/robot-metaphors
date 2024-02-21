@@ -81,56 +81,64 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
             .style("flex-direction", "column")
             .style('font-size', '16px');
 
-        // Create a table for Social and Functional data
-        let table = infoContainer.append('table')
-            .style("width", "100%");
+        // Top row container for Social and Functional
+        let topRowContainer = infoContainer.append('div')
+            .style("display", "flex")
+            .style("flex-direction", "row");
 
-        // Table header
-        let thead = table.append('thead');
-        let headerRow = thead.append('tr');
-        headerRow.append('th').text("Social");
-        headerRow.append('th').text("");
-        headerRow.append('th').text("Functional");
-        headerRow.append('th').text("");
+        // Social Column
+        let socialColumn = topRowContainer.append('div')
+            .style("flex", "1")
+            .style("display", "flex")
+            .style("flex-direction", "column")
+            .style("align-items", "center")
+            .style("justify-content", "center");
 
-        // Table body
-        let tbody = table.append('tbody');
-
-        // Insert data rows for Social and Functional
-        let firstRow = tbody.append('tr');
-        firstRow.append('td').text("Warmth: ");
-        firstRow.append('td').text(Math.round(data.WARMTH * 100) / 100);
-        firstRow.append('td').text("Perception and Interpretation: ");
-        firstRow.append('td').text(Math.round(data.PERCEPTION * 100) / 100);
-
-        let secondRow = tbody.append('tr');
-        secondRow.append('td').text("Competence: ");
-        secondRow.append('td').text(Math.round(data.COMPETENCE * 100) / 100);
-        secondRow.append('td').text("Tactile Interaction and Mobility: ");
-        secondRow.append('td').text(Math.round(data.TACTILE_MOBILITY * 100) / 100);
+        socialColumn.append('div').text("Social")
+            .style("font-weight", "bold");
+        // // Append a table row (tr) with two table headers (th) for 'Social' and 'Functional'
+        // let row = table.append('tr')
+        
+        // row.append('th').text('Social')
+        // row.append('th').text('Functional');
+        // row.append('th').text('Metaphors');
 
 
-        let thirdRow = tbody.append('tr');
-        thirdRow.append('td').text("Discomfort: ");
-        thirdRow.append('td').text(Math.round(data.DISCOMFORT * 100) / 100);
-        thirdRow.append('td').text("Nonverbal Communication: ");
-        thirdRow.append('td').text(Math.round(data.NONVERBAL * 100) / 100);
+        // row = table.append('tr')
+        // // Append a new table row (tr) with two table data (td) cells for 'Warmth' and 'Perception'
+        socialColumn.append('div').text("Warmth: " + Math.round(data.WARMTH * 100) / 100);
+        socialColumn.append('div').text("Competence: " + Math.round(data.COMPETENCE * 100) / 100);
+        socialColumn.append('div').text("Discomfort: " + Math.round(data.DISCOMFORT * 100) / 100);
 
+        // Functional Column
+        let functionalColumn = topRowContainer.append('div')
+            .style("flex", "1")
+            .style("display", "flex")
+            .style("flex-direction", "column")
+            .style("align-items", "center")
+            .style("justify-content", "center");
 
-        // Metaphors section below the table
-        let metaphorsSection = infoContainer.append('div')
+        functionalColumn.append('div').text("Functional")
+            .style("font-weight", "bold");
+
+        functionalColumn.append('div').text("Perception and Interpretation: " + Math.round(data.PERCEPTION * 100) / 100);
+        functionalColumn.append('div').text("Tactile Interaction and Mobility: " + Math.round(data.TACTILE_MOBILITY * 100) / 100);
+        functionalColumn.append('div').text("Nonverbal Communication: " + Math.round(data.NONVERBAL * 100) / 100);
+
+        // Metaphors row below Social and Functional
+        let metaphorsRow = infoContainer.append('div')
             .style("display", "flex")
             .style("flex-direction", "column")
             .style("align-items", "center")
             .style("justify-content", "center")
-            .style("margin-top", "20px"); // Adds some space above the Metaphors section
+            .style("margin-top", "20px"); // Adds some space above the Metaphors row
 
-        metaphorsSection.append('div').text("Metaphors")
+        metaphorsRow.append('div').text("Metaphors")
             .style("font-weight", "bold");
 
-        metaphorsSection.append('div').text(data.METAPHOR1_NAME);
-        metaphorsSection.append('div').text(data.METAPHOR2_NAME);
-        metaphorsSection.append('div').text(data.METAPHOR3_NAME);
+        metaphorsRow.append('div').text(data.METAPHOR1_NAME);
+        metaphorsRow.append('div').text(data.METAPHOR2_NAME);
+        metaphorsRow.append('div').text(data.METAPHOR3_NAME);
 
         // row = table.append('tr')
         // // Append a new table row (tr) with two table data (td) cells for 'Warmth' and 'Perception'
