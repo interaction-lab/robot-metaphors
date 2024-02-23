@@ -1,0 +1,25 @@
+I"¢<p>This dataset contains a collection of 165 robots. For each robot we collected:</p>
+
+<ul>
+  <li>A composite image of the robot from a front and side view</li>
+  <li>A set of 52 design features: 43 binary features, 4 ordinal features, and 5 continuous features</li>
+  <li>Three user-reported design metaphors to describe each robot</li>
+  <li>The levels of abstraction for each metaphor</li>
+  <li>User-Reported Social Expectation Metrics:
+    <ul>
+      <li>Warmth, Competence, Discomfort (RoSAS Scale)</li>
+      <li>Masculinity and Femininity</li>
+      <li>Social Role</li>
+      <li>Identity Closeness</li>
+      <li>Likeability</li>
+    </ul>
+  </li>
+  <li>User-Reported Functional Expectations:
+    <ul>
+      <li>Shared Perception and Interpretation, Tactile Interaction and Mobility, Non-verbal Expressiveness (EmCorp Scale)</li>
+      <li>Design Ambiguity</li>
+      <li>Design Atypicality</li>
+    </ul>
+  </li>
+</ul>
+:ET

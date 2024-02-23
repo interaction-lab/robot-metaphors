@@ -8,7 +8,7 @@ const COLS = ["WARMTH", "COMPETENCE", "DISCOMFORT", "MASCULINE", "FEMININE",
               "AMBIGUITY", "ATYPICALITY"]
 
 function init_compare_viz(){
-    let width = document.getElementById('compare-viz').clientWidth
+    let width = parseFloat(d3.select('#compare-viz').style('width')) * window.innerWidth / 100;
     let margin = width / 5;
     let height = parseInt(d3.select('#compare-viz').style('height'))
 
@@ -40,7 +40,7 @@ function update_robot(){
         rendered=true
     }
 
-    let width = document.getElementById('compare-viz').clientWidth
+    let width = parseFloat(d3.select('#compare-viz').style('width')) * window.innerWidth / 100;
     let margin = width / 5;
     let height = parseInt(d3.select('#compare-viz').style('height'))
 
@@ -159,6 +159,12 @@ var data = d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', fu
         update_robot()
     })
 
+    
+
+}).then(function(){
+    d3.select('#right-robot').property('value', 'QTrobot')
+    d3.select('#left-robot').property('value', 'Blossom')
+    update_robot()
 })
 
 // var data = [210, 36, 322, 59, 123, 350, 290];

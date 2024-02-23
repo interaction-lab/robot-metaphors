@@ -103,7 +103,7 @@ analytics:
 # Site Author
 author:
   name             : "MuFaSAA Dataset"
-  avatar           : "/assets/images/logo.jpg"
+  avatar           : "/assets/images/logo.png"
   bio              : "<b>M</b>etaphors to <b>U</b>nderstand <b>F</b>unctional <b>a</b>nd <b>S</b>ocial <b>A</b>nticipated <b>A</b>ffordances."
   location         : #"Somewhere"
   email            : #"dennler@usc.edu"
