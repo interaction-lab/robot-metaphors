@@ -32,12 +32,10 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
     // Add click event listener for toggling the overlay
     item.on('click', function (event) {
         //turn on the overlay
-        d3.select("#overlay")
-            .style('display', 'block')
-            //.style('height', 'clamp(60vh, 10vw, 100vh)')
+        d3.select("#overlay").style('display', 'block')
 
         //clears out the old info and add the robot picture to the overlay
-        let overlay = d3.select("#overlay_info").html(null).style('height', 'clamp(50vh, 50vw, 65vh)')
+        let overlay = d3.select("#overlay_info").html(null)
            
 
         overlay.append("h2")
@@ -83,7 +81,7 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
             .style("flex-direction", "column")
             .style("align-items", "center")
             .style("justify-content", "center")
-            .style('font-size', 'clamp(10px, 1.5vw, 20px)');
+            .style('font-size', '16p');
 
         // Create a table for Social and Functional data
         let table = infoContainer.append('table')
@@ -127,7 +125,7 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
             .style("flex-direction", "column")
             .style("align-items", "center")
             .style("justify-content", "center")
-            .style('font-size', 'clamp(10px, 1.5vw, 20px)')
+            .style('font-size', '16px')
             .style("margin-top", "20px"); // Adds some space above the Metaphors section
 
         metaphorsSection.append('div').text("Metaphors")

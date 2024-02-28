@@ -37,7 +37,7 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
             //.style('height', 'clamp(60vh, 10vw, 100vh)')
 
         //clears out the old info and add the robot picture to the overlay
-        let overlay = d3.select("#overlay_info").html(null).style('height', 'clamp(50vh, 50vw, 65vh)')
+        let overlay = d3.select("#overlay_info").html(null).style(.style('height', 'clamp(60vh, 10vw, 100vh)'))
            
 
         overlay.append("h2")
