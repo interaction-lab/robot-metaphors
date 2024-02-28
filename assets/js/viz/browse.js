@@ -32,11 +32,17 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
     item.on('click', function (event) {
         //turn on the overlay
         d3.select("#overlay")
-            .style('display', 'block')
+            .style('display', 'flex')
+            
             //.style('height', 'clamp(60vh, 10vw, 100vh)')
 
         //clears out the old info and add the robot picture to the overlay
-        let overlay = d3.select("#overlay_info").html(null).style('height', 'clamp(50vh, 50vw, 65vh)')
+        let overlay = d3.select("#overlay_info").html(null)
+                        .style('display', 'flex')
+                        .style('flex-direction', 'column')
+                        .style('height', 'clamp(50vh, 50vw, 65vh)')
+                        // .style("align-items", "center")
+                        // .style("justify-content", "center");
 
 
         overlay.append("h2")
@@ -48,7 +54,8 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
             .style("display", "flex")
             .style("flex-direction", "row")
             .style("align-items", "center")
-            .style("justify-content", "center");
+            .style("justify-content", "center")
+            // .style("flex", "1") 
 
         // Create a container for the image to control its size explicitly
         let imageContainer = flexContainer.append('div')
@@ -86,7 +93,10 @@ d3.csv('/robot-metaphors/assets/data/tsne_data/RobotAverages.csv', function (dat
 
         // Create a table for Social and Functional data
         let table = infoContainer.append('table')
-            .style("width", "100%");
+            .style("width", "80%")
+            .style("display", "table")
+            .style("align-items", "center")
+            .style("justify-content", "center");;
 
         // Table header
         let thead = table.append('thead');
