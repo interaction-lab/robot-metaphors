@@ -160,9 +160,26 @@ function plot(data, construct, perception_map, color_scale) {
       tooltip.style("visibility", "visible");
     })
     .on("mousemove", function (e, d) {
-      tooltip
-        .style("top", e.pageY - 10 + "px")
-        .style("left", e.pageX + 10 + "px")
+
+      tooltipWidth = tooltip.node().offsetWidth;
+      tooltipHeight = tooltip.node().offsetHeight;
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+
+      // Adjust X position if tooltip exceeds right boundary
+      let tooltipX = mouseX + 10; // Offset from mouse cursor
+      if (mouseX > window.innerWidth / 2) {
+        tooltipX = mouseX - tooltipWidth - 10; // Adjust to fit within viewport
+      }
+
+      // Adjust Y position if tooltip exceeds bottom boundary
+      let tooltipY = mouseY + 10; // Offset from mouse cursor
+      if (mouseY > window.innerHeight / 2) {
+        tooltipY = mouseY - tooltipHeight - 10; // Adjust to fit within viewport
+      }
+
+      tooltip.style("left", tooltipX + "px")
+         .style("top", tooltipY + "px")
         .html(
           `<div>${d.name}<br>${construct}: ${perception_map
             .get(d.name)[construct].toPrecision(4)}</div><img src='${d.image_url}'>`
