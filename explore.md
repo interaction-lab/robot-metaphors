@@ -31,6 +31,10 @@ layout: default
 
   <!-- BROWSE TAB CONTENT -->
   <div id="browse" class="tab-pane fade" style="padding-left:10%;padding-right:10%">
+
+  <div id="overlay" onclick='document.getElementById("overlay").style.display = "none"'>
+    <div id="overlay_info"></div>
+  </div>
     <ul id="robot-list" style="display:flex;width:100%;flex-wrap:wrap;padding-left:50px;padding-right:50px;text-align:center;list-style:none;"></ul>
     <script src="{{ site.baseurl }}/assets/js/viz/browse.js"></script>
   </div>
