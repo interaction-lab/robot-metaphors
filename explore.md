@@ -128,7 +128,7 @@ layout: default
   </div>
 
   <div style="text-align:center;">
-  <svg id="compare-viz" style="width:100%;min-height:650px;outline:1px solid #aaaaaa;display:block;margin:auto;"></svg>
+  <svg id="compare-viz" style="width:25vw;height:650px;outline:1px solid #aaaaaa;display:block;margin:auto;"></svg>
   </div>
 
   <div style="text-align:center;">
