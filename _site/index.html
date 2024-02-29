@@ -1,0 +1,253 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>MUFaSAA Dataset</title>
+<meta name="description" content="The Metaphors to Understand Functional and Social Anticipated Affordances Dataset (MUFaSAA Dataset) allows users to explore robot designs through their metaphors. We present a dataset of 165 robots, each with three crowd-sourced design metaphors.">
+
+
+  <meta name="author" content="MuFaSAA Dataset">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="MUFaSAA Dataset">
+<meta property="og:title" content="MUFaSAA Dataset">
+<meta property="og:url" content="http://localhost:4000/robot-metaphors/">
+
+
+  <meta property="og:description" content="The Metaphors to Understand Functional and Social Anticipated Affordances Dataset (MUFaSAA Dataset) allows users to explore robot designs through their metaphors. We present a dataset of 165 robots, each with three crowd-sourced design metaphors.">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/robot-metaphors/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Interaction Lab @ USC",
+      "url": "http://localhost:4000/robot-metaphors/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/robot-metaphors/feed.xml" type="application/atom+xml" rel="alternate" title="MUFaSAA Dataset Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/robot-metaphors/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="shortcut icon" type="image/png" href="/robot-metaphors/favicon.ico">
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/robot-metaphors/">
+          MUFaSAA Dataset
+          <span class="site-subtitle">Metaphors to Understand Functional and Social Anticipated Affordances</span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/robot-metaphors/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/robot-metaphors/explore/">Explore</a>
+            </li><li class="masthead__menu-item">
+              <a href="/robot-metaphors/expand/">Expand</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    
+    
+    
+
+    <section class="page__content" itemprop="text">
+      <style>
+.button-container {
+  display: flex;
+  justify-content: space-between; /* Evenly space items */
+  width: 100%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  /* margin-bottom: 2vh; */
+  margin-top: 5vh
+}
+
+.navbutton {
+  text-align: center;
+  padding: 10px;
+  background-color: #eee;
+  border: 1px solid #999;
+  width: 25%;
+  height: 0px;
+  padding-top: 25%;
+  cursor: pointer;
+}
+
+.navbutton:hover {
+  background-color: #ddd;
+}
+</style>
+
+<div style="text-align:center;margin-top:2vh;"><img src="/robot-metaphors/assets/images/MUFaSAA.png" style="width:60%; margin-bottom:2vh;" /></div>
+
+<h1 id="welcome">Welcome</h1>
+<p>This is a collection of 165 robot embodiments, the design metaphors people use to describe them, and the expectations users place on them. For example, when a robot looks <em>like a dog</em>, people expect it to behave <em>like a dog</em>. Our dataset compiles these design metaphors across socially interactive robots.</p>
+
+<p>If you <strong>design robots</strong>, this dataset can help you justify your design choices. If you <strong>perform user studies</strong> in Human-Robot Interaction, this dataset can inform which robot you should use for your application based on social and functional requirements.</p>
+
+<p><strong>Cite:</strong> Dennler, N., Ruan, C., Hadiwijoyo, J., Chen, B., Nikolaidis, S., &amp; Matarić, M. (2023). Design metaphors for understanding user expectations of socially interactive robot embodiments. ACM Transactions on Human-Robot Interaction, 12(2), 1-41. <a href="./assets/data/MUFaSAA_Dataset.pdf" style="text-decoration:none;" download="">[PDF]</a></p>
+
+<div class="button-container">
+  <a href="./about" class="navbutton" style="background: url(/robot-metaphors/assets/images/1.png) center/cover no-repeat"></a>
+
+  <a href="./explore" class="navbutton" style="background: url(/robot-metaphors/assets/images/2.png) center/cover no-repeat"></a>
+
+  <a href="./expand" class="navbutton" style="background: url(/robot-metaphors/assets/images/3.png) center/cover no-repeat"></a>
+</div>
+
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <!-- <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/robot-metaphors/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul> -->
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 Interaction Lab @ USC. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/robot-metaphors/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
