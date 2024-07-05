@@ -1,0 +1,201 @@
+METAPHOR,CLASSIFICATION
+a person,HUMAN
+a dog,ANIMAL
+a razor,OBJECT
+a woman,HUMAN
+a cat,ANIMAL
+an astronaut,HUMAN
+"Johnny 5 from the movie ""Short Circuit""",ROBOT
+a vacuum cleaner,OBJECT
+a turtle,ANIMAL
+ASIMO from Honda Robotics,ROBOT
+C-3PO from the Star Wars Franchise,ROBOT
+"the Hulk from the comic ""The Incredible Hulk""",HUMAN
+a tablet,OBJECT
+R2-D2 from the Star Wars franchise,ROBOT
+a baby,HUMAN
+an office chair,OBJECT
+a trashcan,OBJECT
+a rabbit,ANIMAL
+a snowman,OBJECT
+"Eve from the movie ""WALL-E""",ROBOT
+a child,HUMAN
+a dragon,ANIMAL
+a crash test dummy,OBJECT
+a flashlight,OBJECT
+a forklift,OBJECT
+a bulldozer,OBJECT
+a blender,OBJECT
+an octopus,ANIMAL
+a cyclops,HUMAN
+"Mike Wazowski from the movie ""Monsters, Inc""",HUMAN
+a skull,OBJECT
+a kiosk,OBJECT
+"WALL-E from the movie ""WALL-E""",ROBOT
+a pen,OBJECT
+a human head,HUMAN
+an owl,ANIMAL
+a coffee machine,OBJECT
+a maid,HUMAN
+a bottle,OBJECT
+a man,HUMAN
+a spider,ANIMAL
+"a Transformer from the movie ""Transformers""",ROBOT
+a Power Ranger from the Power Rangers franchise,HUMAN
+a claw machine,OBJECT
+a slot machine,OBJECT
+a car rearview mirror,OBJECT
+a speaker,OBJECT
+a toddler,HUMAN
+a rocket,OBJECT
+a doll,HUMAN
+a rubber duck,OBJECT
+"Gizmo from the movie ""Gremlins""",ANIMAL
+a clown,HUMAN
+a penguin,ANIMAL
+a ball,OBJECT
+a Furby,ROBOT
+a Segway,OBJECT
+an alien,HUMAN
+Alarm Clock,OBJECT
+a toy,OBJECT
+a cactus,OBJECT
+a light bulb,OBJECT
+a desk lamp,OBJECT
+a wheelchair,OBJECT
+a donut,OBJECT
+a seal,ANIMAL
+a clock,OBJECT
+a dinosaur,ANIMAL
+the Android Logo,ROBOT
+"Rosey the robot from the show ""The Jetsons""",ROBOT
+"E.T. from the movie ""E.T.""",HUMAN
+"Terminator from the movie ""Terminator""",ROBOT
+a fire hydrant,OBJECT
+a panda,ANIMAL
+a bowling pin,OBJECT
+an egg,OBJECT
+a chicken,ANIMAL
+a cardboard box,OBJECT
+a tank (vehicle),OBJECT
+a Roomba,ROBOT
+"Static from the comic ""Static Shock""",HUMAN
+"Goddard from the show ""Jimmy Neutron""",ROBOT
+an electric toothbrush,OBJECT
+Albert Eistein,HUMAN
+a trumpet,OBJECT
+a chick,ANIMAL
+a carpet cleaner,OBJECT
+the Michelin Man from Michelin Tire commercials,ROBOT
+"No-Face from the movie ""Spirited Away""",HUMAN
+a lawn mower,OBJECT
+an eye,OBJECT
+a sock,OBJECT
+a snake,ANIMAL
+a wolf,ANIMAL
+a traffic cone,OBJECT
+a webcam,OBJECT
+a spatula,OBJECT
+"Batman from the comic ""Batman""",HUMAN
+a caterpillar,ANIMAL
+a skeleton,OBJECT
+a pill,OBJECT
+a human eyeball,OBJECT
+a smartphone,OBJECT
+a manager,HUMAN
+a mannequin,OBJECT
+a professor,HUMAN
+a crab,ANIMAL
+a skiier,HUMAN
+a space traveler,HUMAN
+a giraffe,ANIMAL
+a skateboarder,HUMAN
+a telephone,OBJECT
+a GPS device,OBJECT
+a camera,OBJECT
+a mushroom,OBJECT
+a marshmallow,OBJECT
+a chimpanzee,ANIMAL
+a parrot,ANIMAL
+an exercise instructor,HUMAN
+Ewok from the Star Wars Franchise,ANIMAL
+"Casper from the show ""Casper the Friendly Ghost""",HUMAN
+a praying mantis,ANIMAL
+a donkey,ANIMAL
+a cartoon character,HUMAN
+a pokemon,ANIMAL
+an office worker,HUMAN
+"Babyhead from the movie ""Toy Story""",ROBOT
+a table fan,OBJECT
+a teddy bear,OBJECT
+a water dispenser,OBJECT
+"Little Foot from the movie ""The Land Before Time""",ANIMAL
+an earpod,OBJECT
+C3PO from the Star Wars Franchise,ROBOT
+a LEGO figure,OBJECT
+Storm Trooper from the Star Wars Franchise,HUMAN
+"Shrek from the movie ""Shrek""",HUMAN
+a ghost,HUMAN
+a computer screen,OBJECT
+a chess piece,OBJECT
+a punching bag,OBJECT
+"Android from the Movie ""Ex Machina""",ROBOT
+a nun,HUMAN
+a puppet,OBJECT
+a scale,OBJECT
+a butler,HUMAN
+a pair of binoculars,OBJECT
+"Baymax from the movie ""Big Hero 6""",ROBOT
+a cowboy,HUMAN
+BB-8 from the Star Wars franchise,ROBOT
+"Snoopy from the cartoon ""The Peanuts""",ANIMAL
+"K9 from the show ""Doctor Who""",ROBOT
+a nanny,HUMAN
+"Speed Racer from the show ""Speed Racer""",HUMAN
+a ladybug,ANIMAL
+a scarecrow,OBJECT
+an otter,ANIMAL
+"Gumby from the show ""The Gumby Show""",HUMAN
+a bat (animal),ANIMAL
+a mouse,ANIMAL
+an ash tray,OBJECT
+a centipede,ANIMAL
+a teardrop,OBJECT
+a zombie,HUMAN
+a cocoon,OBJECT
+a humidifier,OBJECT
+"a Dalek from the show ""Doctor Who""",ROBOT
+a receptionist,HUMAN
+a drone,ROBOT
+"RoboCop from the movie ""RoboCop""",ROBOT
+a superhero,HUMAN
+a cash register,OBJECT
+an eyeball,OBJECT
+"Chucky from ""Child's Play""",OBJECT
+Tweety Bird from Looney Toons,ANIMAL
+a racoon,ANIMAL
+"Astro Boy from the anime ""Astro Boy""",ROBOT
+a chihuahua,ANIMAL
+a hula dancer,HUMAN
+a Tamagotchi,OBJECT
+a glowworm,ANIMAL
+a cow,ANIMAL
+a mirror,OBJECT
+a teacher,HUMAN
+a microphone,OBJECT
+a walrus,ANIMAL
+a mermaid,HUMAN
+a tricycle,OBJECT
+a lima bean,OBJECT
+a toad,ANIMAL
+an action figure,OBJECT
+an inflatable yard decoration,OBJECT
+a frog,ANIMAL
+a router,OBJECT
+an hourglass,OBJECT
+a pogo stick,OBJECT
+a power washer,OBJECT
+a garbage compactor,OBJECT
+a bee,ANIMAL
+a helmet,OBJECT
+,199
