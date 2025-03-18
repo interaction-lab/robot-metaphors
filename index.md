@@ -45,4 +45,10 @@ If you **design robots**, this dataset can help you justify your design choices.
   <a href="./expand" class="navbutton" style="background: url({{ site.baseurl }}/assets/images/3.png) center/cover no-repeat"></a>
 </div>
 
-
+## More Resources
+Check out these datasets of robot embodiments:
+* [MetaMorph Dataset](https://github.com/RRachelRR/MetaMorph), a dataset of robots and their associated morphology graphs.
+* [ABOT Databaset](https://www.abotdatabase.info/), a collection of robots and their level of anthropomorphism.
+* [Stanford Social Robot Collection](https://docs.google.com/spreadsheets/d/e/2PACX-1vQWachzhlQhJNY_2zDbJofNdz0GFB8scO9eS-nH02efto3BlpWOEMKBtkVDn1okT7er3lsqZ-3VDasO/pubhtml#), a listing of many social robots and their publications.
+* [The IEEE Robots Guide](https://robotsguide.com/robots), a maintained listing of robots and their physical statistics.
+  
